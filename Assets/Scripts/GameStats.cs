@@ -1,12 +1,31 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
 
-public class GameStats {
+public class GameStats : MonoBehaviour {
 
-	public static uint[] scores = new uint[0];
+	public float GUIMargin = 10f;
+	public float GUIHeight = 20f;
+
+	public static uint currentScore;
+	public static float multiplier = 1f;
+
+	public static uint[] scores;
+
+	void Start() {
+		Init ();
+	}
+
+	public static void Init() {
+		if (scores == null) {
+			scores = new uint[10];
+			for (uint i = 0; i < scores.Length; i++) {
+				scores[i] = i;
+			}
+		}
+	}
 
 	public static void SubmitScore(uint score) {
-		int i = sort(score, scores, 0, scores.Length);
+		int i = sort(score, scores);
 		uint[] temp = new uint[scores.Length + 1];
 		for (int j = 0; j < i; j++) {
 			temp[j] = scores[j];
@@ -16,14 +35,16 @@ public class GameStats {
 			temp[k + 1] = scores[k];
 		}
 		scores = temp;
+		currentScore = 0;
 	}
 
 	// returns the index to replace with the new number
-	private static int sort(uint num, uint[] arr, int left, int right) {
-		if (right - left <= 0) return left;
-		int mid = (right - left) / 2  + left; // do it this way to avoid int overflow
-		if (num < arr[mid]) return sort(num, arr, left, mid);
-		else return sort (num, arr, mid, right);
+	private static int sort(uint num, uint[] arr) {
+		if (num < arr[0]) return 0;
+		for (int i = 0; i < arr.Length - 1; i++) {
+			if (num >= arr[i] && num <= arr[i + 1]) return i + 1;
+		}
+		return arr.Length;
 	}
 
 	public static void Read() {
@@ -32,5 +53,10 @@ public class GameStats {
 
 	public static void Write() {
 
+	}
+
+	void OnGUI() {
+		Debug.Log("score " + currentScore);
+		GUI.Box(new Rect(GUIMargin, GUIMargin, 100, GUIHeight), "" + currentScore);
 	}
 }

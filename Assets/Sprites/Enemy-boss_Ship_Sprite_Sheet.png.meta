@@ -1,0 +1,124 @@
+fileFormatVersion: 2
+guid: 35e6c679ab93f364680664f1c2cc774f
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Enemy_Ship_0
+    21300002: Enemy_Ship_1
+    21300004: Enemy_Ship_2
+    21300006: Enemy-boss_Ship_Sprite_Sheet_3
+    21300008: Enemy-boss_mouth
+    21300010: Enemy-boss_bullet_1
+    21300012: Enemy-boss_bullet_0
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 1024
+  textureSettings:
+    filterMode: -1
+    aniso: 1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Enemy_Ship_0
+      rect:
+        serializedVersion: 2
+        x: 1445
+        y: 1405
+        width: 386
+        height: 377
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Enemy_Ship_1
+      rect:
+        serializedVersion: 2
+        x: 1447
+        y: 890
+        width: 362
+        height: 388
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Enemy_Ship_2
+      rect:
+        serializedVersion: 2
+        x: 1467
+        y: 306
+        width: 364
+        height: 364
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Enemy-boss_Ship_Sprite_Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 766
+        width: 1262
+        height: 821
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Enemy-boss_mouth
+      rect:
+        serializedVersion: 2
+        x: 491
+        y: 215
+        width: 66
+        height: 67
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Enemy-boss_bullet_1
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 191
+        width: 294
+        height: 54
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Enemy-boss_bullet_0
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 307
+        width: 101
+        height: 44
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 

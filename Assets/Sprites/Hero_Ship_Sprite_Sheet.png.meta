@@ -1,0 +1,136 @@
+fileFormatVersion: 2
+guid: 2835d62244651b642bf1c7cbdaae2d26
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Hero_Ship_Sprite_Sheet
+    21300002: Hero_Ship_Sprite_Sheet_0
+    21300004: Hero_Ship_Sprite_Sheet_1
+    21300006: Hero_Ship_Sprite_Sheet_2
+    21300008: Hero_Ship_Sprite_Sheet_3
+    21300010: flame1
+    21300012: flame2
+    21300014: flame3
+    21300016: bullet fire
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 1024
+  textureSettings:
+    filterMode: -1
+    aniso: 1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Hero_Ship_Sprite_Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 388
+        y: 1791
+        width: 904
+        height: 315
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Hero_Ship_Sprite_Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 1173
+        width: 966
+        height: 471
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Hero_Ship_Sprite_Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 560
+        width: 966
+        height: 546
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Hero_Ship_Sprite_Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 27
+        width: 966
+        height: 471
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: flame1
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 1131
+        width: 87
+        height: 60
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: flame2
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 1237
+        width: 132
+        height: 60
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: flame3
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 1361
+        width: 166
+        height: 60
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: bullet fire
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 737
+        width: 65
+        height: 37
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 

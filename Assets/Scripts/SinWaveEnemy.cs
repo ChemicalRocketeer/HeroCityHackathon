@@ -3,7 +3,8 @@ using System.Collections;
 
 [RequireComponent (typeof (Health))]
 public class SinWaveEnemy : MonoBehaviour {
-	
+
+	public Transform explosion;
 	public Transform bullet;
 	public Vector2 offset;
 	public float horizontalSpeed = 1f;
@@ -11,13 +12,19 @@ public class SinWaveEnemy : MonoBehaviour {
 	public float verticalStretch = 1f;
 	public float verticalStartingPos = 0f;
 
+	public int scoreIncrease = 1;
+
 	public LayerMask collisionMask;
 	public int collisionDamage = 1;
 
 	private Health health;
+	private float yPosition = 0f;
+	private float startTime = 0f;
 
 	void Start() {
 		health = GetComponent<Health>();
+		yPosition = transform.position.y;
+		startTime = Random.Range(0, Time.time);
 	}
 
 	void Update () {
@@ -27,8 +34,8 @@ public class SinWaveEnemy : MonoBehaviour {
 
 		Vector2 pos = new Vector2(offset.x, offset.y);
 		pos.x = transform.position.x + horizontalSpeed * Time.deltaTime;
-		float sin = Mathf.Sin(Time.time * verticalSpeed) * verticalStretch;
-		pos.y = verticalStartingPos + sin;
+		float sin = Mathf.Sin((Time.time - startTime) * verticalSpeed) * verticalStretch;
+		pos.y = verticalStartingPos + sin + yPosition;
 
 		Vector2 currentPos = Utils.Vec3to2(transform.position);
 		RaycastHit2D hit = Physics2D.BoxCast(
@@ -43,7 +50,7 @@ public class SinWaveEnemy : MonoBehaviour {
 			if (h) {
 				h.TakeDamage(collisionDamage);
 			}
-			Destroy(gameObject);
+			Die();
 		}
 
 		transform.position = Utils.Vec2to3(pos);
@@ -51,6 +58,8 @@ public class SinWaveEnemy : MonoBehaviour {
 	}
 
 	public void Die() {
+		Instantiate(explosion, transform.position, transform.rotation);
+		GameStats.currentScore += (uint) (scoreIncrease * GameStats.multiplier);
 		Destroy(gameObject);
 	}
 }
