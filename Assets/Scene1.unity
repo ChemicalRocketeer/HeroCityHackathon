@@ -297,7 +297,7 @@ MonoBehaviour:
   pivotDistance: 10
   moveSpeed: 1
   angleStretch: .5
-  fireRate: .5
+  fireTime: .100000001
 --- !u!114 &294778646
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -540,8 +540,8 @@ MonoBehaviour:
     y: -10
     width: 30
     height: 20
-  maxShield: 1
-  shieldRechargeTime: 5
+  maxShield: 3
+  shieldRechargeTime: 3
 --- !u!60 &1434830271
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -648,7 +648,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -15, y: 0, z: 0}
   m_LocalScale: {x: .721612632, y: .721612394, z: .771715701}
-  m_Children: []
+  m_Children:
+  - {fileID: 1486677460}
   m_Father: {fileID: 0}
   m_RootOrder: 3
 --- !u!114 &1434830275
@@ -664,6 +665,72 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 1
   shield: 3
+--- !u!1 &1486677457
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1486677460}
+  - 95: {fileID: 1486677459}
+  - 212: {fileID: 1486677458}
+  m_Layer: 9
+  m_Name: Flames
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!212 &1486677458
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1486677457}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 14fe05b740f3832489b70b3af9f5d739, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!95 &1486677459
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1486677457}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d084e8efd9d3f2e49bfd648270338e8c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!4 &1486677460
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1486677457}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -3.5036478, y: -.31443727, z: 0}
+  m_LocalScale: {x: 1.33804071, y: 1.33804071, z: 1.29581404}
+  m_Children: []
+  m_Father: {fileID: 1434830274}
+  m_RootOrder: 0
 --- !u!1 &1489166532
 GameObject:
   m_ObjectHideFlags: 0
@@ -1167,7 +1234,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a712b6348f35d3498ab1c63f1d09b91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultIntensity: .0500000007
+  defaultIntensity: .300000012
   defaultDuration: .5
 --- !u!1 &1918185644
 GameObject:

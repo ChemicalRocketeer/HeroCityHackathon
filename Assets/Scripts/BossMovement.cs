@@ -11,8 +11,8 @@ public class BossMovement : MonoBehaviour {
 	public float moveSpeed = 1; // radians per second
 	public float angleStretch = 0.5f;
 
-	public float fireRate = 0.5f;
-	private float fireTimer = 3f;
+	public float fireTime = 0.5f;
+	private float fireTimer = 0f;
 
 	private Health health;
 	
@@ -35,9 +35,9 @@ public class BossMovement : MonoBehaviour {
 		Utils.LookAt2D(transform, piv);
 		transform.Rotate(0, 0, 180);
 
-		if (fireTimer >= 1/fireRate) {
-			Fire ();
+		if (fireTimer >= fireTime) {
 			fireTimer = 0;
+			Fire ();
 		}
 		fireTimer += Time.deltaTime;
 	}
@@ -46,13 +46,14 @@ public class BossMovement : MonoBehaviour {
 		Vector3 pos = transform.position;
 		pos.x += bulletSpawnPos.x;
 		pos.y += bulletSpawnPos.y;
-		Bullet b = (Bullet) Instantiate(bullet, pos, transform.rotation);
+		Bullet b = ((Bullet) Instantiate(bullet, pos, transform.rotation));
 		float mag = b.velocity.magnitude;
 		float angle = Utils.AngleOf(Utils.Vec3to2(-transform.right));
 		b.velocity = Utils.Vec2FromAngle(angle + (Random.value - 0.5f), mag);
 	}
 
 	public void Die() {
+		CameraShake.Shake();
 		Transform ex = (Transform) Instantiate(explosion, transform.position, transform.rotation);
 		ex.localScale = ex.localScale * exScale;
 		exScale += .2f;

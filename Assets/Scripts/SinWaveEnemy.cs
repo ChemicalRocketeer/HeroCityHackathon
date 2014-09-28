@@ -48,6 +48,7 @@ public class SinWaveEnemy : MonoBehaviour {
 		if (hit.collider) {
 			Health h = hit.transform.GetComponent<Health>();
 			if (h) {
+				CameraShake.Shake();
 				h.TakeDamage(collisionDamage);
 			}
 			Die();
@@ -58,6 +59,7 @@ public class SinWaveEnemy : MonoBehaviour {
 	}
 
 	public void Die() {
+		CameraShake.Shake();
 		Instantiate(explosion, transform.position, transform.rotation);
 		GameStats.currentScore += (uint) (scoreIncrease * GameStats.multiplier);
 		Destroy(gameObject);
