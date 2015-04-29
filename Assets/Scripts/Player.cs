@@ -36,6 +36,7 @@ public class Player : MonoBehaviour {
 			lives --;
 		}
 		if (lives <= 0) {
+			GameStats.SubmitScore(GameStats.currentScore);
 			Application.LoadLevel("Game Over");
 		}
 		if (health.shield < maxShield) {
